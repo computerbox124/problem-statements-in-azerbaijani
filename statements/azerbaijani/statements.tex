@@ -1,0 +1,39 @@
+\documentclass [11pt, a4paper, oneside] {article}
+
+\usepackage [T2A] {fontenc}
+\usepackage [utf8] {inputenc}
+\usepackage [english, russian,azerbaijani] {babel}
+\usepackage {amsmath}
+\usepackage {amssymb}
+\usepackage {olymp}
+\usepackage {comment}
+\usepackage {epigraph}
+\usepackage {expdlist}
+\usepackage {graphicx}
+\usepackage {ulem}
+\usepackage {import}
+\usepackage{ifpdf}
+\ifpdf
+  \DeclareGraphicsRule{*}{mps}{*}{}
+\fi
+
+\begin {document}
+
+\contest
+{Məşq turu}%
+{Azercell Cup 2021}%
+{23 - 25 İyun 2021}%
+
+\binoppenalty=10000
+\relpenalty=10000
+
+\renewcommand{\t}{\texttt}
+
+
+\graphicspath{{../../problems/a+b/statements/azerbaijani/}}
+  \def\ProblemIndex{A}
+\import{../../problems/a+b/statements/azerbaijani/}{./problem.tex}
+
+  
+
+\end {document}
