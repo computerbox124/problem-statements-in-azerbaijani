@@ -2,20 +2,46 @@
 
 \usepackage [T2A] {fontenc}
 \usepackage [utf8] {inputenc}
-\usepackage [english, russian,azerbaijani] {babel}
+\usepackage [english, russian, azerbaijani] {babel}
 \usepackage {amsmath}
 \usepackage {amssymb}
-\usepackage {olymp}
+\usepackage [azerbaijani]{olymp}
 \usepackage {comment}
 \usepackage {epigraph}
 \usepackage {expdlist}
 \usepackage {graphicx}
+\usepackage {multirow}
+\usepackage {siunitx}
 \usepackage {ulem}
+\usepackage{color}
+%\usepackage {hyperref}
 \usepackage {import}
-\usepackage{ifpdf}
+\usepackage {ifpdf}
 \ifpdf
   \DeclareGraphicsRule{*}{mps}{*}{}
 \fi
+
+\usepackage[X2,T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{newunicodechar}
+
+\newunicodechar{Ə}{\textazeriSchwa}
+\newunicodechar{ə}{\textazerischwa}
+
+\DeclareRobustCommand{\textazeriSchwa}{%
+  {\fontencoding{X2}\selectfont\symbol{"9A}}%
+}
+\DeclareRobustCommand{\textazerischwa}{%
+  {\fontencoding{X2}\selectfont\symbol{"BA}}%
+}
+
+\makeatletter
+\expandafter\def\expandafter\@uclclist\expandafter
+  {\@uclclist\textazerischwa\textazeriSchwa}
+\makeatother
+
 
 \begin {document}
 
